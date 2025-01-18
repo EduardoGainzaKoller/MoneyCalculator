@@ -1,9 +1,9 @@
 package software.ulpgc.moneycalculator.app;
 
-import software.ulpgc.moneycalculator.io.*;
-import software.ulpgc.moneycalculator.io.interfaces.CurrencyLookup;
-import software.ulpgc.moneycalculator.model.Currency;
-import software.ulpgc.moneycalculator.model.ExchangeRate;
+import software.ulpgc.moneycalculator.architecture.io.*;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.CurrencyLookup;
+import software.ulpgc.moneycalculator.architecture.model.Currency;
+import software.ulpgc.moneycalculator.architecture.model.ExchangeRate;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +14,8 @@ public class Main {
         File file = new File("C:/Users/edani/MoneyCalculatorEntregable/src/main/resources/world_currencies.tsv");
         List<Currency> currencies = new FileCurrencyLoader(file, new TsvCurrencyDeserializer()).load();
         CurrencyLookup lookup = new MapCurrencyLookup(currencies);
-        JsonExchangeRateDeserializer deserializer = new JsonExchangeRateDeserializer();
-        ExchangeRate exchangeRate = new EraioExchangeRateLoader(deserializer).load(lookup.get("BDT"), lookup.get("BBD"));
-        System.out.println(exchangeRate);
+        SwingMainFrame swingMainFrame = new SwingMainFrame(currencies, lookup);
+        swingMainFrame.setVisible(true);
     }
 
 

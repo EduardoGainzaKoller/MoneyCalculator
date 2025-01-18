@@ -1,7 +1,7 @@
-package software.ulpgc.moneycalculator.io;
+package software.ulpgc.moneycalculator.architecture.io;
 
-import software.ulpgc.moneycalculator.io.interfaces.CurrencyDeserializer;
-import software.ulpgc.moneycalculator.model.Currency;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.CurrencyDeserializer;
+import software.ulpgc.moneycalculator.architecture.model.Currency;
 
 public class TsvCurrencyDeserializer implements CurrencyDeserializer {
 

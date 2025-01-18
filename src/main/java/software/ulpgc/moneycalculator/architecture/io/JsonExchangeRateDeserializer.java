@@ -1,8 +1,8 @@
-package software.ulpgc.moneycalculator.io;
+package software.ulpgc.moneycalculator.architecture.io;
 
 import com.google.gson.Gson;
-import software.ulpgc.moneycalculator.io.interfaces.ExchangeRateDeserializer;
-import software.ulpgc.moneycalculator.io.pojos.OpenExchangeRate;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.ExchangeRateDeserializer;
+import software.ulpgc.moneycalculator.architecture.io.pojos.OpenExchangeRate;
 
 public class JsonExchangeRateDeserializer implements ExchangeRateDeserializer {
 

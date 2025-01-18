@@ -1,20 +1,14 @@
-package software.ulpgc.moneycalculator.io;
+package software.ulpgc.moneycalculator.architecture.io;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import software.ulpgc.moneycalculator.io.interfaces.ExchangeRateDeserializer;
-import software.ulpgc.moneycalculator.io.interfaces.ExchangeRateLoader;
-import software.ulpgc.moneycalculator.io.pojos.OpenExchangeRate;
-import software.ulpgc.moneycalculator.model.Currency;
-import software.ulpgc.moneycalculator.model.ExchangeRate;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.ExchangeRateDeserializer;
+import software.ulpgc.moneycalculator.architecture.model.Currency;
+import software.ulpgc.moneycalculator.architecture.model.ExchangeRate;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.ExchangeRateLoader;
+import software.ulpgc.moneycalculator.architecture.io.pojos.OpenExchangeRate;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.time.LocalDate;
 
 import static org.jsoup.Connection.Method.GET;
@@ -44,7 +38,7 @@ public class EraioExchangeRateLoader implements ExchangeRateLoader {
             double crossRate = getCrossRate(from, to, openExchangeRate);
             return new ExchangeRate(date, crossRate, from, to);
         } catch (Exception e) {
-            throw new RuntimeException("Error al cargar las tasas de cambio: " + e.getMessage(), e);
+            throw new RuntimeException("Error loading exchange rates: " + e.getMessage(), e);
         }
     }
 

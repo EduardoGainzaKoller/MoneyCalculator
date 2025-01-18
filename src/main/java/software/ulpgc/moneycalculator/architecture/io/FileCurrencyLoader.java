@@ -1,8 +1,8 @@
-package software.ulpgc.moneycalculator.io;
+package software.ulpgc.moneycalculator.architecture.io;
 
-import software.ulpgc.moneycalculator.io.interfaces.CurrencyDeserializer;
-import software.ulpgc.moneycalculator.io.interfaces.CurrencyLoader;
-import software.ulpgc.moneycalculator.model.Currency;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.CurrencyDeserializer;
+import software.ulpgc.moneycalculator.architecture.io.interfaces.CurrencyLoader;
+import software.ulpgc.moneycalculator.architecture.model.Currency;
 
 import java.io.File;
 import java.io.IOException;

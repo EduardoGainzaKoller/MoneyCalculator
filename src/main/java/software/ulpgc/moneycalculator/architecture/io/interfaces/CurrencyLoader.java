@@ -1,6 +1,6 @@
-package software.ulpgc.moneycalculator.io.interfaces;
+package software.ulpgc.moneycalculator.architecture.io.interfaces;
 
-import software.ulpgc.moneycalculator.model.Currency;
+import software.ulpgc.moneycalculator.architecture.model.Currency;
 
 import java.io.IOException;
 import java.util.List;

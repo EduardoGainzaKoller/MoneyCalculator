@@ -1,4 +1,4 @@
-package software.ulpgc.moneycalculator.io.pojos;
+package software.ulpgc.moneycalculator.architecture.io.pojos;
 
 import java.util.List;
 
